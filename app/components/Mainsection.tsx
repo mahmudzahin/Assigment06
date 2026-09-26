@@ -6,10 +6,8 @@ export default function Hero() {
   return (
     <section className="border-b border-zinc-800 bg-black">
       <div className="mx-auto grid min-h-[650px] max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:px-8 lg:py-20">
-
         {/* Left Column */}
         <div className="max-w-2xl">
-
           {/* Eyebrow */}
           <p className="mb-5 text-sm font-bold tracking-[0.25em] text-lime-400">
             WORKOUT LIBRARY
@@ -41,7 +39,6 @@ export default function Hero() {
 
         {/* Right Column */}
         <div className="relative flex items-center justify-center">
-
           {/* Background glow */}
           <div className="absolute h-72 w-72 rounded-full bg-lime-400/10 blur-3xl" />
 
@@ -55,7 +52,6 @@ export default function Hero() {
               className="h-auto w-full object-contain"
             />
           </div>
-
         </div>
       </div>
     </section>
