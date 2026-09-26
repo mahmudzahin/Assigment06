@@ -47,7 +47,7 @@ export default function Hero() {
 
           <div className="relative w-full max-w-xl">
             <Image
-              src="/Assigment06/banner.png"
+              src="/banner.png"
               alt="Workout illustration"
               width={700}
               height={700}
