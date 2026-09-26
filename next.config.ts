@@ -1,18 +1,20 @@
 
 import type { NextConfig } from 'next';
 
+const isGitHubPages = process.env.GITHUB_ACTIONS === 'true';
+
 const nextConfig: NextConfig = {
-  // Export Next.js as a static website
-  output: 'export',
+  ...(isGitHubPages
+    ? {
+        output: 'export',
+        basePath: '/Assigment06',
+        assetPrefix: '/Assigment06/',
+        trailingSlash: true,
+      }
+    : {}),
 
-  // GitHub Pages
-  basePath: '/Assigment06',
-
-  assetPrefix: '/Assigment06/',
-
-  // GitHub Pages does not support Next.js image optimization
   images: {
-    unoptimized: true,
+    unoptimized: isGitHubPages,
 
     remotePatterns: [
       {
@@ -21,9 +23,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-
-  // Generate /workout/1/ instead of /workout/1
-  trailingSlash: true,
 };
 
 export default nextConfig;
